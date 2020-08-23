@@ -10,4 +10,6 @@ import com.algaworks.osworks.domain.models.Cliente;
 public interface ClienteRepository extends JpaRepository<Cliente, Long>{
 
 	List<Cliente> findByNome(String nome);
+//	List<Cliente> findByNomeContain(String nome);
+	Cliente findByEmail(String email);
 }
