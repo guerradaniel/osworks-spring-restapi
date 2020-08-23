@@ -58,6 +58,8 @@ public class Problema {
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
+	
+	
 	public List<Campo> getCampos() {
 		return campos;
 	}
