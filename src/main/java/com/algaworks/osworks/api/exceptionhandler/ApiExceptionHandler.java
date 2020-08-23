@@ -23,7 +23,7 @@ import com.algaworks.osworks.domain.exception.NegocioException;
 public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 	
 	@Autowired
-	private MessageSource messageSource;
+	private MessageSource messageSource;	
 	
 	@ExceptionHandler(NegocioException.class)
 	public ResponseEntity<Object> handleNegocio(NegocioException ex, WebRequest request) {
