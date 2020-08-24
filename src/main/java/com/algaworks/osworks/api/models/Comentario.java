@@ -2,6 +2,7 @@ package com.algaworks.osworks.api.models;
 
 import java.time.OffsetDateTime;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -9,6 +10,7 @@ import javax.persistence.ManyToOne;
 
 import com.algaworks.osworks.domain.models.OrdemServico;
 
+@Entity
 public class Comentario {
 
 	@Id

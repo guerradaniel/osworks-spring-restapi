@@ -2,6 +2,8 @@ package com.algaworks.osworks.domain.models;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -10,6 +12,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+import com.algaworks.osworks.api.models.Comentario;
 
 @Entity
 public class OrdemServico {
@@ -29,7 +34,8 @@ public class OrdemServico {
 	private OffsetDateTime dataAbertura;	
 	private OffsetDateTime dataFinalizacao;
 	
-	
+	@OneToMany(mappedBy = "ordemServico")
+	private List<Comentario> comentarios = new ArrayList<>();
 	
 	public Long getId() {
 		return id;
@@ -39,6 +45,12 @@ public class OrdemServico {
 	}
 	public Cliente getCliente() {
 		return cliente;
+	}
+	public List<Comentario> getComentarios() {
+		return comentarios;
+	}
+	public void setComentarios(List<Comentario> comentarios) {
+		this.comentarios = comentarios;
 	}
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
