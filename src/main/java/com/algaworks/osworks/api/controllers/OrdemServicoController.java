@@ -2,6 +2,7 @@ package com.algaworks.osworks.api.controllers;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 
@@ -43,8 +44,8 @@ public class OrdemServicoController {
 	}
 	
 	@GetMapping
-	public List<OrdemServico> listar(){
-		return ordemServicoRepository.findAll(); 
+	public List<OrdemServicoModel> listar(){
+		return toCollectionModel(ordemServicoRepository.findAll()); 
 	}
 	
 	@GetMapping("/{ordemServicoId}")
@@ -61,5 +62,11 @@ public class OrdemServicoController {
 	
 	private OrdemServicoModel toModel(OrdemServico ordemServico) {
 		return modelMapper.map(ordemServico, OrdemServicoModel.class);
+	}
+	
+	private List<OrdemServicoModel> toCollectionModel(List<OrdemServico> ordensServico){
+		return ordensServico.stream()
+				.map(ordemServico -> toModel(ordemServico))
+				.collect(Collectors.toList());
 	}
 }
