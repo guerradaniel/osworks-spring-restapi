@@ -159,8 +159,6 @@ O *pom.xml* possui uma um dependência chamada **Spring DevTools** que é usada 
 
 ## Testes
 
-## Testes
-
 Para realizar os testes na API, abra o Postman e crie as pastas e seus respectivos verbos:
 
 ![Organização de pastas e requisições do PostMan](/readme/doc-postman1.PNG)  
