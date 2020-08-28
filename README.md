@@ -116,7 +116,7 @@ O Maven, o automatizador de *builds* ficará como responsável como gerenciador 
 
 Através do arquivo *pom.xml*, as dependêcias já inseridas darão poder a aplicação para utilizar os seguintes projetos em *Spring*:
 
-img
+![Edit Spring Boot Starters](/readme/doc-spring-edit.png)
 
 
 
