@@ -116,8 +116,7 @@ O Maven, o automatizador de *builds* ficará como responsável como gerenciador 
 
 Através do arquivo *pom.xml*, as dependêcias já inseridas darão poder a aplicação para utilizar os seguintes projetos em *Spring*:
 
-![Edit Spring Boot Starters](/readme/doc-spring-edit.png)
-
+![Edit Spring Boot Starters](/readme/doc-spring-edit.png)  
 
 
 >Caso tenha algum erro no *build* do projeto, você pode instalá-las manualmente clicando com o botão direito na raiz do projeto > *Spring* > *Edit Starters*.
@@ -157,6 +156,120 @@ O *pom.xml* possui uma um dependência chamada **Spring DevTools** que é usada 
 >Exemplo: **V001__cria-tabela-cliente.sql**.
 >
 >***Ao criar o arquivo, utilize dois undercores "__".**
+
+## Testes
+
+## Testes
+
+Para realizar os testes na API, abra o Postman e crie as pastas e seus respectivos verbos:
+
+![Organização de pastas e requisições do PostMan](/readme/doc-postman1.PNG)  
+
+
+### Classe Cliente (ClienteController)
+
+GET - Clientes - Listar
+```
+GET /clientes HTTP/1.1
+Host: localhost:8080
+```
+
+GET | Clientes - Buscar
+```
+GET /clientes/15 HTTP/1.1
+Host: localhost:8080
+Accept: application/json
+```
+
+POST | Clientes - Adicionar
+```
+POST /clientes HTTP/1.1
+Host: localhost:8080
+Accept: application/json
+Content-Type: application/json
+
+{
+    "nome": "João Moura",
+    "email": "moura23@algaworks.com.br",
+    "telefone": "34 97774-7474"
+}
+```
+
+PUT | Clientes  - Atualizar
+```
+PUT /clientes/1 HTTP/1.1
+Host: localhost:8080
+Accept: application/json
+Content-Type: application/json
+
+{
+    "nome": "João Santos",
+    "email": "santos@algaworks.com.br",
+    "telefone": "34 5554-5252"
+}
+```
+
+DEL | Clientes - Remover
+```
+DELETE /clientes/1 HTTP/1.1
+Host: localhost:8080
+Accept: application/json
+```
+
+### Classe Ordem de Serviço (OrdemServicoController)
+
+GET | Ordens de Serviço - Listar
+```
+GET /ordens-servico HTTP/1.1
+Host: localhost:8080
+```
+
+GET | Ordens de Serviço - Buscar 
+```
+GET /ordens-servico/1 HTTP/1.1
+Host: localhost:8080
+Accept: application/json
+```
+
+POST | Ordens de Serviço - Adicionar
+```
+POST /ordens-servico HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+{
+    "cliente": {
+        "id": 2
+    },
+    "descricao": "Reparo impressora: sem tinta.",
+    "preco": 300.50
+}
+```
+
+PUT | Ordens de Serviço - Finalizar
+```
+PUT /ordens-servico/2/finalizacao HTTP/1.1
+Host: localhost:8080
+```
+
+GET | Comentario - Listar
+```
+GET /ordens-servico/1/comentarios HTTP/1.1
+Host: localhost:8080
+```
+
+POST | Comentario - Adicionar
+```
+POST /ordens-servico/2/comentarios HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "descricao": "Placa mãe foi reparada."
+}
+```
+
+
+
 
 
 ## Contribuições
