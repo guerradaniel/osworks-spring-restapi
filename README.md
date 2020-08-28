@@ -265,7 +265,7 @@ Content-Type: application/json
     "descricao": "Placa mãe foi reparada."
 }
 ```
-
+Para mais informações acesse a [documentação oficial](https://www.postman.com/api-documentation-tool/) do Postman.
 
 
 
