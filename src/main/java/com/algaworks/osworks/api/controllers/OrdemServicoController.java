@@ -56,7 +56,7 @@ public class OrdemServicoController {
 		
 		if(ordemServico.isPresent()) {
 			OrdemServicoModel ordemServicoModel = toModel(ordemServico.get());
-			return ResponseEntity.ok(ordemServicoModel);
+			return ResponseEntity.ok(ordemServicoModel);	
 		}
 		
 		return ResponseEntity.notFound().build();
