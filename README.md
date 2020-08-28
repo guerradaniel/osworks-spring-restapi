@@ -166,20 +166,20 @@ Para realizar os testes na API, abra o Postman e crie as pastas e seus respectiv
 
 ### Classe Cliente (ClienteController)
 
-GET - Clientes - Listar
+**GET** | Clientes - Listar
 ```
 GET /clientes HTTP/1.1
 Host: localhost:8080
 ```
 
-GET | Clientes - Buscar
+**GET** | Clientes - Buscar
 ```
 GET /clientes/15 HTTP/1.1
 Host: localhost:8080
 Accept: application/json
 ```
 
-POST | Clientes - Adicionar
+**POST** | Clientes - Adicionar
 ```
 POST /clientes HTTP/1.1
 Host: localhost:8080
@@ -193,7 +193,7 @@ Content-Type: application/json
 }
 ```
 
-PUT | Clientes  - Atualizar
+**PUT** | Clientes  - Atualizar
 ```
 PUT /clientes/1 HTTP/1.1
 Host: localhost:8080
@@ -207,7 +207,7 @@ Content-Type: application/json
 }
 ```
 
-DEL | Clientes - Remover
+**DEL** | Clientes - Remover
 ```
 DELETE /clientes/1 HTTP/1.1
 Host: localhost:8080
@@ -216,20 +216,20 @@ Accept: application/json
 
 ### Classe Ordem de Serviço (OrdemServicoController)
 
-GET | Ordens de Serviço - Listar
+**GET** | Ordens de Serviço - Listar
 ```
 GET /ordens-servico HTTP/1.1
 Host: localhost:8080
 ```
 
-GET | Ordens de Serviço - Buscar 
+**GET** | Ordens de Serviço - Buscar 
 ```
 GET /ordens-servico/1 HTTP/1.1
 Host: localhost:8080
 Accept: application/json
 ```
 
-POST | Ordens de Serviço - Adicionar
+**POST** | Ordens de Serviço - Adicionar
 ```
 POST /ordens-servico HTTP/1.1
 Host: localhost:8080
@@ -243,19 +243,19 @@ Content-Type: application/json
 }
 ```
 
-PUT | Ordens de Serviço - Finalizar
+**PUT** | Ordens de Serviço - Finalizar
 ```
 PUT /ordens-servico/2/finalizacao HTTP/1.1
 Host: localhost:8080
 ```
 
-GET | Comentario - Listar
+**GET** | Comentario - Listar
 ```
 GET /ordens-servico/1/comentarios HTTP/1.1
 Host: localhost:8080
 ```
 
-POST | Comentario - Adicionar
+**POST** | Comentario - Adicionar
 ```
 POST /ordens-servico/2/comentarios HTTP/1.1
 Host: localhost:8080
